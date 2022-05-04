@@ -12,6 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ComposeBasic">
         <activity
+            android:name=".ui.practice03.MainActivity"
+            android:exported="false"
+            android:label="@string/title_activity_main"
+            android:theme="@style/Theme.ComposeBasic.NoActionBar" />
+        <activity
             android:name=".ui.practice02.MainActivity"
             android:exported="false"
             android:label="@string/title_activity_main"
