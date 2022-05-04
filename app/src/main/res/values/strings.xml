@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">ComposeBasic</string>
     <string name="practice_01_app_name">리스트 입니다!</string>
+    <string name="title_activity_main">MainActivity</string>
 </resources>
