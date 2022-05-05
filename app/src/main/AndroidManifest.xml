@@ -12,17 +12,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ComposeBasic">
         <activity
-            android:name=".ui.practice04.MainActivity"
+            android:name=".ui.practice05.MainActivity"
             android:exported="true"
             android:label="@string/title_activity_main"
-            android:theme="@style/Theme.ComposeBasic.NoActionBar" >
-
+            android:theme="@style/Theme.ComposeBasic.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ui.practice04.MainActivity"
+            android:exported="true"
+            android:label="@string/title_activity_main"
+            android:theme="@style/Theme.ComposeBasic.NoActionBar"/>
         <activity
             android:name=".ui.practice03.MainActivity"
             android:exported="false"
@@ -37,8 +41,7 @@
             android:name=".ui.practice01.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.ComposeBasic.NoActionBar">
-        </activity>
+            android:theme="@style/Theme.ComposeBasic.NoActionBar"></activity>
     </application>
 
 </manifest>
