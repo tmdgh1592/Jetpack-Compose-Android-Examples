@@ -8,7 +8,6 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.ClickableText
 import androidx.compose.foundation.text.selection.DisableSelection
 import androidx.compose.foundation.text.selection.SelectionContainer
@@ -16,11 +15,8 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
-import androidx.compose.material.TextField
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
@@ -76,10 +72,16 @@ fun AnnotatedClickableText(context: Context = LocalContext.current) {
 
         // We attach this *URL* annotation to the following content
         // until `pop()` is called
-        pushStringAnnotation(tag = "URL",
-            annotation = "https://developer.android.com")
-        withStyle(style = SpanStyle(color = Color.Blue,
-            fontWeight = FontWeight.Bold)) {
+        pushStringAnnotation(
+            tag = "URL",
+            annotation = "https://developer.android.com"
+        )
+        withStyle(
+            style = SpanStyle(
+                color = Color.Blue,
+                fontWeight = FontWeight.Bold
+            )
+        ) {
             append("here")
         }
         pop()
@@ -91,8 +93,10 @@ fun AnnotatedClickableText(context: Context = LocalContext.current) {
         onClick = { offset ->
             // We check if there is an *URL* annotation attached to the text
             // at the clicked position
-            annotatedText.getStringAnnotations(tag = "URL", start = offset,
-                end = offset)
+            annotatedText.getStringAnnotations(
+                tag = "URL", start = offset,
+                end = offset
+            )
                 .firstOrNull()?.let { annotation ->
                     // If yes, we log its value
                     Toast.makeText(context, "${annotation.item}", Toast.LENGTH_SHORT).show()
@@ -196,13 +200,15 @@ fun TextContainer() {
         })
 
         val context = LocalContext.current
-        ClickableText(text = AnnotatedString("Click Me!"), onClick = { offset->
+        ClickableText(text = AnnotatedString("Click Me!"), onClick = { offset ->
             Toast.makeText(context, "$offset is Clicked!", Toast.LENGTH_SHORT).show()
         })
 
-        SelectionContainer(modifier = Modifier
-            .background(Color.Yellow)
-            .padding(3.dp)) {
+        SelectionContainer(
+            modifier = Modifier
+                .background(Color.Yellow)
+                .padding(3.dp)
+        ) {
             Column {
                 Text(text = "선택이 가능한 텍스트입니다!")
                 DisableSelection {
