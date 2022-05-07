@@ -12,6 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ComposeBasic">
         <activity
+            android:name=".ui.practice07.ButtonActivity"
+            android:exported="false"
+            android:label="@string/title_activity_button"
+            android:theme="@style/Theme.ComposeBasic.NoActionBar" />
+        <activity
             android:name=".ui.ShapeActivity"
             android:exported="true"
             android:label="@string/title_activity_shape"
@@ -26,7 +31,7 @@
             android:name=".ui.practice05.MainActivity"
             android:exported="true"
             android:label="@string/title_activity_main"
-            android:theme="@style/Theme.ComposeBasic.NoActionBar"/>
+            android:theme="@style/Theme.ComposeBasic.NoActionBar" />
         <activity
             android:name=".ui.practice04.MainActivity"
             android:exported="true"
