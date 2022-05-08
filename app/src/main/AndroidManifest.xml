@@ -13,19 +13,21 @@
         android:theme="@style/Theme.ComposeBasic">
         <activity
             android:name=".ui.practice07.ButtonActivity"
-            android:exported="false"
-            android:label="@string/title_activity_button"
-            android:theme="@style/Theme.ComposeBasic.NoActionBar" />
-        <activity
-            android:name=".ui.ShapeActivity"
             android:exported="true"
-            android:label="@string/title_activity_shape"
+            android:label="@string/title_activity_button"
             android:theme="@style/Theme.ComposeBasic.NoActionBar">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.ShapeActivity"
+            android:exported="true"
+            android:label="@string/title_activity_shape"
+            android:theme="@style/Theme.ComposeBasic.NoActionBar">
         </activity>
         <activity
             android:name=".ui.practice05.MainActivity"
