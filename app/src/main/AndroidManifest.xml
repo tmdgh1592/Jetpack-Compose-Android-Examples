@@ -12,9 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ComposeBasic">
         <activity
-            android:name=".ui.practice09.SnackbarActivity"
+            android:name=".ui.practice10.TextFieldActivity"
             android:exported="true"
-            android:label="@string/title_activity_snackbar"
+            android:label="@string/title_activity_text_field"
             android:theme="@style/Theme.ComposeBasic.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,16 +23,20 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".ui.practice09.SnackbarActivity"
+            android:exported="true"
+            android:label="@string/title_activity_snackbar"
+            android:theme="@style/Theme.ComposeBasic.NoActionBar" />
+        <activity
             android:name=".ui.practice08.CheckBoxActivity"
             android:exported="true"
             android:label="@string/title_activity_check_box"
-            android:theme="@style/Theme.ComposeBasic.NoActionBar">
-        </activity>
+            android:theme="@style/Theme.ComposeBasic.NoActionBar"></activity>
         <activity
             android:name=".ui.practice07.ButtonActivity"
             android:exported="true"
             android:label="@string/title_activity_button"
-            android:theme="@style/Theme.ComposeBasic.NoActionBar"></activity>
+            android:theme="@style/Theme.ComposeBasic.NoActionBar" />
         <activity
             android:name=".ui.ShapeActivity"
             android:exported="true"
