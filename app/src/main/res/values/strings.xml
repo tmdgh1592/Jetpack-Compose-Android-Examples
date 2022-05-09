@@ -20,4 +20,5 @@
     <string name="title_activity_shape">ShapeActivity</string>
     <string name="title_activity_button">ButtonActivity</string>
     <string name="title_activity_check_box">CheckBoxActivity</string>
+    <string name="title_activity_snackbar">SnackbarActivity</string>
 </resources>
