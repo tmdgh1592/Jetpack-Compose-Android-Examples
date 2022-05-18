@@ -8,6 +8,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.*
 import androidx.compose.runtime.*
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
@@ -52,8 +53,8 @@ fun OnboardingScreen(onContinueClicked: () -> Unit) {
 
 @Composable
 fun MyApp() {
-
-    var shouldShowOnboarding by remember { mutableStateOf(true) }
+    // rememberSaveable 를 사용하면 '화면전환', '테마변경' 시에도 상태를 유지함.
+    var shouldShowOnboarding by rememberSaveable { mutableStateOf(true) }
 
     if (shouldShowOnboarding) {
         // shouldShowOnboarding을 직접 전달하지 않고, "콜백을 전달함"
@@ -75,6 +76,8 @@ private fun Greetings(names: List<String> = List(1000) { "$it" }) {
         }
     }
 }
+
+
 
 @Composable
 private fun Greeting(name: String) {
